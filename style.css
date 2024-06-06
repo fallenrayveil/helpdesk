@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('./assets/bgrd.png');
+    background-size: cover; /* Mengatur ukuran background */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-position: center 0%; /* Mengatur posisi background */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    color: #1713C0;
+    z-index: 2;
+}
+
+h1 {
+    margin: 0;
+    font-size: 60px; /* Ukuran font yang disesuaikan */
+}
+
+h1 strong {
+    display: block; /* Membuat setiap elemen <strong> berada di baris baru */
+}
+
+.subtext {
+    font-size: 35px; /* Ukuran font yang disesuaikan */
+    font-weight: normal; /* Font regular */
+    margin-top: 5px; /* Jarak di atas teks subtext */
+    color: #8381F1;
+}
+
+.icon {
+    position: absolute;
+    top: 185px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon img {
+    width: 250px;
+    height: 250px;
+}
+
+.arrow {
+    position: absolute;
+    top: 80%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Pastikan arrow memiliki z-index yang lebih tinggi */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transisi untuk efek halus */
+}
+
+.arrow img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.5s ease; /* Transisi untuk efek halus */
+}
+
+.arrow:hover {
+    background-color: rgba(23, 19, 192, 0.1); /* Warna latar belakang saat hover */
+    border-radius: 50%; /* Bentuk bulat saat hover */
+    transform: scale(1.2); /* Membesarkan ukuran saat hover */
+}
+
+.arrow:hover img {
+    transform: scale(1.1); /* Membesarkan ikon saat hover */
+}
+
+.arrow img {
+    width: 70px;
+    height: 70px;
+}
+
+/* CSS untuk Dot */
+.dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9 {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Pastikan dot memiliki z-index yang lebih rendah */
+}
+
+.dot1 {
+    width: 55px;
+    height: 55px;
+    background-color: #DCF2FF;
+}
+
+.dot2 {
+    width: 40px;
+    height: 40px;
+    background-color: #5CB3EB;
+}
+
+.dot3 {
+    width: 150px;
+    height: 150px;
+    background-color: #CCE9FB;
+}
+
+.dot4 {
+    width: 180px;
+    height: 180px;
+    background-color: #5CB3EB;
+}
+
+.dot5 {
+    width: 100px;
+    height: 100px;
+    background-color: #CCE9FB;
+}
+
+.dot6 {
+    width: 80px;
+    height: 80px;
+    background-color: #EEF7FE;
+}
+
+.dot7 {
+    width: 120px;
+    height: 120px;
+    background-color: #5CB3EB;
+}
+
+.dot8 {
+    width: 110px;
+    height: 110px;
+    background-color: #CCE9FB;
+}
+
+.dot9 {
+    width: 90px;
+    height: 90px;
+    background-color: #d3edff;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .subtext {
+        font-size: 25px;
+    }
+
+    .icon img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .arrow img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9 {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+/* CSS untuk halaman login */
+.login-container {
+    max-width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 5px;
+}
+
+.login-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 10px;
+    background-color: #1713C0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0e0d8a;
+}
