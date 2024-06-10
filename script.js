@@ -1,3 +1,12 @@
+// Fungsi untuk menampilkan pesan error
+function showError(message) {
+    document.getElementById('error-message').innerText = message;
+    // Setelah 3 detik, kosongkan pesan error
+    setTimeout(function() {
+        document.getElementById('error-message').innerText = '';
+    }, 3000);
+}
+
 // Fungsi untuk melakukan login
 function login() {
     const username = document.getElementById('username').value;
@@ -15,7 +24,7 @@ function login() {
         if (data.success) {
             window.location.href = 'dashboard.html';
         } else {
-            document.getElementById('error-message').innerText = data.message;
+            showError(data.message);
         }
     })
     .catch(error => console.error('Error:', error));
