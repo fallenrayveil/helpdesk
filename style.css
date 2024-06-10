@@ -2,7 +2,21 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+body.login-page {
     background-color: #f4f4f4;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 body.index-page {
@@ -184,45 +198,124 @@ h1 strong {
 }
 
 /* CSS untuk halaman login */
-.login-container {
-    max-width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.box-form {
+    width: 80%;
+    max-width: 1200px;
+    background: #FFFFFF;
     border-radius: 10px;
-}
-
-.login-container h2 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 20px 6px #7d7d7d85;
+  }
+  @media (max-width: 980px) {
+    .box-form {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .box-form .left {
+    flex: 1;
+    color: #FFFFFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://lh3.googleusercontent.com/p/AF1QipN5qff8QYyG2CF6dY-2DUH3wZsGy_u3hLCsR9IL=s680-w680-h510");
+    position: relative;
+  }
+  .box-form .left .overlay {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    background: #5961f96a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+  .box-form .left .overlay h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-top: 40px;
     margin-bottom: 20px;
-    text-align: center;
-}
-
-.login-container form {
+    text-align: left;
+  }
+  
+  .box-form .right {
+    flex: 1;
+    padding: 80px 60px;
     display: flex;
     flex-direction: column;
-}
-
-.login-container label {
+    justify-content: center;
+    align-items: center; /* Menyelaraskan konten ke tengah */
+  }
+  @media (max-width: 980px) {
+    .box-form .right {
+      width: 100%;
+      padding: 40px;
+    }
+  }
+  .box-form .right h5 {
+    font-size: 50px; /* Membuat teks lebih besar */
+    margin-bottom: 30px;
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    color: #2a75f3;
+  }
+  .box-form .right p {
+    font-size: 14px;
+    color: #B0B3B9;
+    margin-bottom: 20px;
+  }
+  .box-form .right .inputs {
+    margin-bottom: 20px;
+    width: 90%; /* Menyesuaikan lebar ke 100% */
+  }
+  .box-form .right label {
+    display: block;
+    font-size: 16px;
     margin-bottom: 5px;
-}
-
-.login-container input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.login-container button {
-    padding: 10px;
-    background-color: #1713C0;
-    color: white;
+    margin-top: 30px;
+    color: #2a75f3;
+  }
+  .box-form .right input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px; /* Menambahkan jarak antara input dan label */
+    font-size: 16px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background-color: #0e0d8a;
-}
+    outline: none;
+    border-bottom: 2px solid #2a75f3;
+    color: #2a75f3;
+  }
+  .box-form .right .forget-password {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px; /* Mengurangi margin atas */
+    margin-bottom: 30px;
+    width: 100%; /* Menyesuaikan lebar ke 100% */
+  }
+  .box-form .right .forget-password a {
+    text-decoration: none;
+    color: #2a75f3a6;
+  }
+  .box-form .right .forget-password a:hover {
+    color: #003590de;
+  }
+  
+  .box-form .right button {
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    box-shadow: 0px 4px 20px 0px #2a75f3a6;
+    background-image: linear-gradient(135deg, #5fa8f3 10%, #2a75f3 100%);
+    align-self: flex-end;
+    transition: background-color 1.5s ease;
+    margin-bottom: 30px; /* Atur margin bawah untuk tombol */
+  }
+  .box-form .right button:hover {
+    background-image: linear-gradient(135deg, #2a75f3 10%, #5fa8f3 100%);
+  }

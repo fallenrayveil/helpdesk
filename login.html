@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="script.js"></script>
 </head>
-<body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Login</button>
-        </form>
-        <div id="error-message" style="color: red;"></div>
+<body class="login-page">
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+        <h1>Help Desk Bank UMKM Jatim</h1>
+      </div>
     </div>
+    <div class="right">
+      <h5>LOG IN</h5>
+      <div class="inputs">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <br>
+      <div class="forget-password">
+        <a href="forget.html">Forget Password?</a>
+      </div>
+      <br>
+      <button type="submit">Log In</button>
+    </div>
+    <div id="error-message" style="color: red;"></div>
+  </div>
 </body>
 </html>

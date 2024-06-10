@@ -1,10 +1,10 @@
-document.getElementById('loginForm').addEventListener('submit', function(e) {
+document.querySelector('.right button[type="submit"]').addEventListener('click', function(e) {
     e.preventDefault();
     
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     
-    fetch('http://localhost:3000/login', {
+    fetch('http://localhost:3000/login', { // Ubah URL sesuai dengan server Anda
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
